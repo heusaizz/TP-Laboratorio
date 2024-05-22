@@ -1,0 +1,127 @@
+.Titulo {
+    text-align: center;
+}
+
+.migas-de-pan{
+    text-align: right;
+    margin-right: 10px;
+}
+
+.caja {
+    border: 1px solid blue;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/*Selector and Share button*/
+
+.contenedor-seleccion {
+    display: flex;
+}
+
+.seleccion-moneda {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241); 
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.btn {
+    border: none;
+    background: none;
+    padding: 10px; 
+    margin: 0; 
+    width: fit-content; 
+    height: fit-content;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: orange;
+}
+
+.fa-custom-size {
+    font-size: 25px;
+}
+
+.seleccion-moneda label {
+    margin-right: 10px;
+}
+
+.seleccion-moneda select {
+    margin-right: 10px;
+}
+
+.share h2 {
+    text-decoration: underline;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+.share h2:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+/*TABLE*/
+
+.db {
+    background-color: rgba(169, 215, 255, 0.859);  
+    color: rgb(38, 38, 82);
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 20px;
+}   
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow-y: auto;
+    margin: 0% auto;
+}
+
+.tfoot {
+    background-color:rgb(203, 207, 255);
+    border-radius: 10px;
+}
+
+thead tr th {
+    background-color:rgb(203, 207, 255);
+    border-radius: 10px;
+}
+
+.table .fa-arrow-up{
+    color:rgb(0, 255, 98)
+}
+.table .fa-arrow-down{
+    color:red;
+}
+
+
+@media screen and (max-width: 416px){
+    .caja {
+        border: 1px solid blue;
+        padding: 5px;
+        border-radius: 20px;
+    }
+
+    .contenedor-seleccion {
+        display: flex;
+        justify-content: center;
+    }
+
+    .share h2{
+        text-align: center;
+    }
+}

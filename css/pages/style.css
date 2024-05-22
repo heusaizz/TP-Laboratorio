@@ -1,0 +1,431 @@
+@import url();
+
+html {
+    height: 100%;
+}
+
+body{
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    min-height: 100%;
+}
+
+
+/*HEADER*/
+
+#section-header-image {
+    height: 10vh;
+    background-image: url('../../img/cambio-de-moneda-en-correos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: space-between;
+}
+
+.Logo_Principal {
+    max-height: 50px;
+    align-content: space-between;
+}
+
+.Text-center {
+    margin: 10px;
+    color: black;
+    font-size: 30px;
+}
+
+/*SIDEBAR*/
+
+.sidebar {
+    width: 73%;
+    background-color: rgb(93, 120, 240);
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 60px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    background-color: whitesmoke;
+    border-radius: 10em;
+}
+
+.menu ul li img {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px;
+}
+
+.comments {
+    width: calc(100% - 50px);
+    background-color: whitesmoke;
+    color: #333;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment .comment-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.comment .username {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*MAIN*/
+
+.contenedor {
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 10px;
+}
+
+.migas-de-pan {
+    text-align: right;
+    margin: 20px;
+}
+
+.contenedor-seleccion {
+    display: grid;
+    grid-template-columns: 380px;
+}
+
+
+.seleccion-moneda {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    text-align: left; 
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.btn {
+    border: none;
+    background: none;
+    padding: 10px; 
+    margin: 0; 
+    width: fit-content; 
+    height: fit-content;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: orange;
+}
+
+.fa-custom-size {
+    font-size: 20px;
+}
+
+.seleccion-moneda label {
+    margin-right: 10px;
+}
+
+.seleccion-moneda select {
+    margin-right: 10px;
+}
+
+.pizarra {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.titulo-pizarra {
+    font-size: 24px;
+}
+
+.ultima-actualizacion {
+    margin-top: 10px;
+    font-style: italic;
+    text-align: right;
+}
+
+.grilla-cotizaciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 416px) {
+    .grilla-cotizaciones {
+        grid-template-areas: auto;
+        grid-template-columns: auto;
+    }
+
+    .seleccion-moneda{
+        margin-right: 20px;
+    }
+
+    .cotizacion {
+        border: 1px solid #ccc;
+        padding: 20px;
+        display: block;
+        font-family: sans-serif;
+        margin: 10px;
+    }
+
+}
+
+.cotizacion {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 10px;
+}
+
+.precio-compra, .precio-venta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cotizacion h3 {
+    margin-top: 20px;
+}
+
+.active button {
+    border: none;
+    background: none;
+    padding: 0; 
+    margin: 0; 
+    width: fit-content; 
+    height: fit-content;
+    color: rgb(93, 120, 240);
+}
+
+.button button{
+    border: none;
+    background: none;
+    padding: 0; 
+    margin: 0; 
+    width: fit-content; 
+    height: fit-content;
+}
+
+.fa-custom-size {
+    font-size: 28px;
+}
+
+.fa-star:hover {
+    cursor: pointer;
+    color: rgb(93, 120, 240);
+}
+
+/*FOOTER*/
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: lightgoldenrodyellow;
+}
+
+@media screen and (max-width: 416px) {
+    footer {
+        grid-template-areas: auto;
+        grid-template-columns: auto;
+    }
+}
+
+.columna-izquierda,
+.columna-centro,
+.columna-derecha {
+    padding: 20px;
+    text-align: center; 
+}
+
+ul {
+    padding: 0; 
+    list-style-type: none;
+}
+
+.columna-izquierda ul,
+.columna-centro ul,
+.columna-derecha ul {
+    margin-top: 0; 
+}
+
+.madeby {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: flex-end;
+}
+
+.texto-inferior {
+    grid-column: 1 / -1; 
+    padding: 20px;
+    text-align: center; 
+}
+
+
+
+/*GRID*/
+
+.grid-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'menu menu'
+        'sidebar main'
+        'footer footer';
+    grid-template-columns: 18% auto;
+    grid-template-rows: 10% 5% 10% auto auto;
+}
+
+@media screen and (max-width: 416px) {
+    .grid-layout {
+        grid-template-areas: 
+            'header header'
+            'menu menu'
+            'sidebar sidebar'
+            'main main'
+            'footer footer';
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 5% auto auto 10%;
+    }
+
+    .c4 {
+        border: 1px solid black;
+        overflow: auto;
+    }
+
+    .c3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .grid-layout {
+        grid-template-areas: 
+            'header header'
+            'menu menu'
+            'sidebar sidebar'
+            'main main'
+            'footer footer';
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 5% auto auto 10%;
+    }
+
+    .c4 {
+        border: 1px solid black;
+        overflow: auto;
+    }
+
+    .c3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+
+
+.c1 {
+    grid-area: header;
+}
+
+.c2 {
+    grid-area: menu;
+}
+
+.c3 {
+    grid-area: sidebar;
+}
+
+.caja.c3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.caja.c3 .sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja.c3 .menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja.c3 .comments {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja.c3 .comment {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.c4 {
+    grid-area: main;
+}
+
+.c5 {
+    grid-area: footer;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pages/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="grid-layout">
+
+        <div class="caja c1">
+
+            <header>
+                <section id="section-header-image">
+                    <img src="img/10306978.png" class="Logo_Principal">
+                    <h1 class="Text-center">Cotizador de Monedas</h1>
+                </section>
+            </header>
+        </div>
+
+        <div class="caja c2">
+            <section class="migas-de-pan">
+                <p><strong>Usted esta aqui: </strong>Inicio</p>
+            </section>
+        </div>
+
+        <div class="caja c3">
+            <div class="sidebar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#" class="active"><img src="img/casa de inicio.png" alt="Inicio">Inicio</a></li>
+                        <li><a href="Miarchivo.html"><img src="img/1383970.png" alt="Mi Archivo">Mi Archivo</a></li>
+                        <li><a href="informe.html"><img src="img/2991112.png" alt="Informes">Informes</a></li>
+                        <li><a href="Contacto.html"><img src="img/5010471.png" alt="Contáctenos">Contáctenos</a></li>
+                    </ul>
+                </div>
+                <div class="comments">
+                    <div class="comment">
+                        <img src="img/1144760.png" alt="Usuario 1">
+                        <div class="comment-text">
+                            <span class="username">Roger Medina:</span>
+                            <p>Tienen muy buen servicio y las cotizaciones son siempre correctas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="caja c4">
+            <div class="contenedor">
+
+                <h2 class="titulo-pizarra">Pizarra de Cotizaciones</h2>
+                <div class="contenedor-seleccion">
+                    <section class="seleccion-moneda">
+                        <label for="moneda">Seleccione una moneda:</label>
+                        <select id="moneda" name="moneda">
+                            <option value="TODAS">Todas</option>
+                            <option value="Dólar Oficial">Dólar Oficial</option>
+                        </select>
+                        <button id="buscar" class="btn"><i class="fa-solid fa-filter fa-custom-size"></i></button>
+                    </section>
+                </div>
+                <section class="pizarra">
+                    <p class="ultima-actualizacion">Última actualización: 01/05/2024 12:00 PM</p>
+                    <div class="grilla-cotizaciones">
+                        <div class="cotizacion">
+                            <h3>Dólar Oficial</h3>
+                            <div class="precio-compra">
+                                <span>Compra</span>
+                                <span>$100</span>
+                            </div>
+                            <div class="precio-venta">
+                                <span>Venta</span>
+                                <span>$102</span>
+                            </div>
+                            <div class="active"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
+                        </div>
+                        <div class="cotizacion">
+                            <h3>Dólar Blue</h3>
+                            <div class="precio-compra">
+                                <span>Compra</span>
+                                <span>$100</span>
+                            </div>
+                            <div class="precio-venta">
+                                <span>Venta</span>
+                                <span>$102</span>
+                            </div>
+                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
+                        </div>
+                        <div class="cotizacion">
+                            <h3>Dólar Tarjeta</h3>
+                            <div class="precio-compra">
+                                <span>Compra</span>
+                                <span>$100</span>
+                            </div>
+                            <div class="precio-venta">
+                                <span>Venta</span>
+                                <span>$102</span>
+                            </div>
+                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
+                        </div>
+                        <div class="cotizacion">
+                            <h3>Dólar MEP</h3>
+                            <div class="precio-compra">
+                                <span>Compra</span>
+                                <span>$100</span>
+                            </div>
+                            <div class="precio-venta">
+                                <span>Venta</span>
+                                <span>$102</span>
+                            </div>
+                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
+                        </div>
+                        <div class="cotizacion">
+                            <h3>Dólar CCL</h3>
+                            <div class="precio-compra">
+                                <span>Compra</span>
+                                <span>$100</span>
+                            </div>
+                            <div class="precio-venta">
+                                <span>Venta</span>
+                                <span>$102</span>
+                            </div>
+                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
+                        </div>
+                        <div class="cotizacion">
+                            <h3>Dólar Cripto</h3>
+                            <div class="precio-compra">
+                                <span>Compra</span>
+                                <span>$100</span>
+                            </div>
+                            <div class="precio-venta">
+                                <span>Venta</span>
+                                <span>$102</span>
+                            </div>
+                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="caja c5">
+        <footer>
+            <div class="columna-izquierda">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#" class="active">¿Quienes somos?</a></li>
+                    <li><a href="#" class="active">Socios Estrategicos</a></li>
+                    <li><a href="#" class="active">Trabaje con nosotros</a></li>
+                    <li><a href="#" class="active">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="columna-centro">
+                <h3>Accesos</h3>
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="Miarchivo/Miarchivo.html" class="active">Mi Archivo</a></li>
+                    <li><a href="#" class="active">Informes</a></li>
+                    <li><a href="Contacto/Contacto.html" class="active">Contactenos</a></li>
+                </ul>
+            </div>
+            <div class="columna-derecha">
+                <h3>Contacto</h3>
+                <p>Universidad Tecnologica Nacional</p>
+                <p>Zeballos 1341 - S2000BQA</p>
+                <p>ROSARIO</p>
+                <p><b>¡Escribanos!</b></p>
+            </div>
+            <div class="madeby">
+                <h4><b>Hecho por: </b></h4>
+                <p>Gutierrez Santino</p>
+                <p>Martinez Lorenzo</p>
+                <p>Pagano Keila</p>
+            </div>
+            <div class="texto-inferior">
+                <p>FACULTAD REGIONAL ROSARIO Universidad Tecnológica Nacional</p>
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>

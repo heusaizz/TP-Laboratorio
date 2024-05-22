@@ -1,0 +1,82 @@
+.Titulo {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+.migas-de-pan{
+    text-align: right;
+    margin-right: 10px;
+}
+
+.caja {
+    border: 1px solid blue;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/*TABLE*/
+
+.db {
+    background-color: rgba(169, 215, 255, 0.859);  
+    color: rgb(38, 38, 82);
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 20px;
+}   
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: orange;
+}
+
+.btn-print{
+    border: none;
+    background: none;
+    cursor: pointer;
+    float: right;
+}
+
+.btn-print:hover{
+    color: orange;
+}
+
+.fa-custom-size {
+    font-size: 20px;
+}
+
+.tfoot {
+    background-color:rgb(203, 207, 255);
+    border-radius: 10px;
+}
+
+thead tr th {
+    background-color:rgb(203, 207, 255);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
