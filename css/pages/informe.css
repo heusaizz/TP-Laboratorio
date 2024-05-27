@@ -1,8 +1,9 @@
+/* Titulo */
 .Titulo {
     text-align: center;
 }
 
-.migas-de-pan{
+.migas-de-pan {
     text-align: right;
     margin-right: 10px;
 }
@@ -11,20 +12,23 @@
     border: 1px solid blue;
     padding: 20px;
     border-radius: 20px;
+    display: flex;  /* Usar Flexbox para el layout */
+    flex-direction: column;
 }
 
-/*Selector and Share button*/
-
+/* Selector and Share button */
 .contenedor-seleccion {
     display: flex;
+    justify-content: space-between; /* Asegura que los elementos estén separados */
+    align-items: center;  /* Alinea los elementos al centro verticalmente */
+    margin-top: 20px;
 }
 
 .seleccion-moneda {
     display: flex;
     align-items: center;
-    margin-top: 20px;
     border-radius: 5px;
-    background-color: rgb(241, 241, 241); 
+    background-color: rgb(241, 241, 241);
     padding: 10px;
     font-family: sans-serif;
 }
@@ -32,14 +36,14 @@
 .btn {
     border: none;
     background: none;
-    padding: 10px; 
-    margin: 0; 
-    width: fit-content; 
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
     height: fit-content;
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     color: orange;
 }
 
@@ -51,9 +55,23 @@
     margin-right: 10px;
 }
 
+.img_cot {
+    width: 50%; /* Ajustar el tamaño para que la imagen sea grande pero no interfiera */
+    height: auto; /* Mantener proporción */
+    display: flex;
+    margin-left: 1200px;
+}
+
+.img_cot img {
+    max-width: 100%;
+    height: auto;
+}
+
 .seleccion-moneda select {
     margin-right: 10px;
 }
+
+
 
 .share h2 {
     text-decoration: underline;
@@ -62,21 +80,20 @@
     padding-top: 12px;
 }
 
-.share h2:hover{
+.share h2:hover {
     color: orange;
     cursor: pointer;
 }
 
-/*TABLE*/
-
+/* TABLE */
 .db {
-    background-color: rgba(169, 215, 255, 0.859);  
+    background-color: rgba(169, 215, 255, 0.859);
     color: rgb(38, 38, 82);
     font-weight: bold;
     font-size: 14px;
     text-align: left;
     border-radius: 20px;
-}   
+}
 
 td, th {
     padding: 8px;
@@ -92,37 +109,49 @@ table {
 }
 
 .tfoot {
-    background-color:rgb(203, 207, 255);
+    background-color: rgb(203, 207, 255);
     border-radius: 10px;
 }
 
 thead tr th {
-    background-color:rgb(203, 207, 255);
+    background-color: rgb(203, 207, 255);
     border-radius: 10px;
 }
 
-.table .fa-arrow-up{
-    color:rgb(0, 255, 98)
-}
-.table .fa-arrow-down{
-    color:red;
+.table .fa-arrow-up {
+    color: rgb(0, 255, 98)
 }
 
-/*Media Query*/
+.table .fa-arrow-down {
+    color: red;
+}
 
-@media screen and (max-width: 416px){
+/* Media Query */
+@media screen and (max-width: 768px) {
     .caja {
         border: 1px solid blue;
         padding: 5px;
         border-radius: 20px;
+        flex-direction: column;
     }
 
     .contenedor-seleccion {
-        display: flex;
-        justify-content: center;
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        align-items: center; /* Centrar elementos en pantallas pequeñas */
     }
 
-    .share h2{
+    .share h2 {
         text-align: center;
+    }
+
+    .img_cot {
+        width: 100%; /* Asegurar que la imagen ocupe todo el ancho disponible en pantallas pequeñas */
+        justify-content: center; /* Centrar la imagen en pantallas pequeñas */
+        margin: 20px 0; /* Añadir margen en pantallas pequeñas */
+    }
+
+    .img_cot img {
+        max-width: 100%;
+        height: auto;
     }
 }
