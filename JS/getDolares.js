@@ -1,4 +1,3 @@
-
 const nombreMapping = {
     "Oficial": "Dólar Oficial",
     "Blue": "Dólar Blue",
