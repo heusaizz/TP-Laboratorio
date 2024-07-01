@@ -28,6 +28,8 @@
 .contact-form label {
     display: block;
     margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 .contact-form input[type="text"],
@@ -37,16 +39,19 @@
     padding: 0px;
     margin-bottom: 20px;
     font-size: 1.5em;
+    font-family: 'sans-serif';
 }
 
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
+input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460AA;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
-
 
 .contact-info label{
     display: flex;

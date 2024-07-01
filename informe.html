@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Informe</title>
     <link rel="stylesheet" href="css/pages/informe.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-..." crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('bFNL3wrcR7wiB5xGj')
+    </script>
 </head>
 
 <body>
@@ -16,24 +23,56 @@
         </section>
     </header>
     <div class="caja">
-        <div class="caja">
-            <h1>Informe</h1>
-            <div class="contenedor-principal">
-                <div class="img_cot">
-                    <img src="img/cotization_graphic.jpg" alt="Cotization Graphic">
-                </div>
+
         <div class="contenedor-seleccion">
             <section class="seleccion-moneda">
-                <label for="moneda">Seleccione una moneda:</label>
-                <select id="moneda" name="moneda">
+                <p>Seleccione una moneda:</p>
+                <select id="currencySelector" name="moneda">
                     <option value="TODAS">Todas</option>
-                    <option value="Dólar Oficial">Dólar Oficial</option>
+                    <option value="Oficial">Dólar Oficial</option>
+                    <option value="Blue">Dólar Blue</option>
+                    <option value="Tarjeta">Dólar Tarjeta</option>
+                    <option value="Bolsa">Dólar MEP</option>
+                    <option value="Mayorista">Dólar Mayor</option>
+                    <option value="Cripto">Dólar Cripto</option>
+                    <option value="Euro">Euro</option>
+                    <option value="Real Brasileño">Real Brasileño</option>
+                    <option value="Peso Chileno">Peso Chileno</option>
+                    <option value="Peso Uruguayo">Peso Uruguayo</option>
                 </select>
                 <button id="buscar" class="btn"><i class="fa-solid fa-filter fa-custom-size"></i></button>
             </section>
         </div>
+
         <div class="share">
-            <h2 href="" class="title">Compartir Información</h2>
+            <button class="btn-share" id="share-btn"><i class="fa-solid fa-share-nodes fa-custom-size"></i></button>
+        </div>
+        <div id="emailPopup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <form id="form">
+                    <div class="field">
+                        <label for="from_name">Nombre: </label>
+                        <input type="text" name="from_name" id="from_name" required>
+                    </div>
+                    <div class="field">
+                        <label for="to_name">Para: </label>
+                        <input type="text" name="to_name" id="to_name" required>
+                    </div>
+                    <div class="field">
+                        <label for="reply_to">Email del destinatario:</label>
+                        <input type="text" name="reply_to" id="reply_to" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Mensaje: </label>
+                        <input type="text" name="message" id="message">
+                    </div>
+                    <div class="field">
+                        <input type="hidden" name="user_quotes" id="user_quotes">
+                    </div>
+                    <input type="submit" id="button" value="Send Email">
+                </form>
+                <span class="close-button" onclick="closePopup()">&times;</span>
+            </div>
         </div>
         <div class="table">
             <table>
@@ -46,49 +85,8 @@
                         <th>Variacion</th>
                     </tr>
                 </thead>
-
                 <tbody>
-                    <tr>
-                        <td colspan="5" class="db">
-                            Dolar Blue
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>15/04/2024</td>
-                        <td>$995</td>
-                        <td>$1015</td>
-                        <td><i class="fa-solid fa-arrow-down"></i></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>15/04/2024</td>
-                        <td>$995</td>
-                        <td>$1015</td>
-                        <td><i class="fa-solid fa-arrow-up"></i></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>15/04/2024</td>
-                        <td>$995</td>
-                        <td>$1015</td>
-                        <td><i class="fa-solid fa-arrow-down"></i></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>15/04/2024</td>
-                        <td>$995</td>
-                        <td>$1015</td>
-                        <td><i class="fa-solid fa-arrow-up"></i></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>15/04/2024</td>
-                        <td>$995</td>
-                        <td>$1015</td>
-                        <td><i class="fa-solid fa-arrow-down"></i></td>
-                    </tr>
+                    <div id="displayArea"></div>
                 </tbody>
                 <tfoot>
                     <tr></tr>
@@ -96,6 +94,11 @@
                 </tfoot>
             </table>
         </div>
+        <canvas id="miGrafica"></canvas>
+        <script src="JS/grafica.js"></script>
+        <script src="JS/filterInformes.js"></script>
+        <script src="JS/compartir.js"></script>
+        <script src="JS/tablaVariaciones.js"></script>
     </div>
 </body>
 

@@ -12,21 +12,18 @@
     border: 1px solid blue;
     padding: 20px;
     border-radius: 20px;
-    display: flex;  /* Usar Flexbox para el layout */
-    flex-direction: column;
 }
 
-/* Selector and Share button */
+/*Selector and Share button*/
+
 .contenedor-seleccion {
     display: flex;
-    justify-content: space-between; /* Asegura que los elementos estén separados */
-    align-items: center;  /* Alinea los elementos al centro verticalmente */
-    margin-top: 20px;
 }
 
 .seleccion-moneda {
     display: flex;
     align-items: center;
+    margin-top: 20px;
     border-radius: 5px;
     background-color: rgb(241, 241, 241);
     padding: 10px;
@@ -55,37 +52,60 @@
     margin-right: 10px;
 }
 
-.img_cot {
-    width: 50%; /* Ajustar el tamaño para que la imagen sea grande pero no interfiera */
-    height: auto; /* Mantener proporción */
-    display: flex;
-    margin-left: 1200px;
-}
-
-.img_cot img {
-    max-width: 100%;
-    height: auto;
-}
-
 .seleccion-moneda select {
     margin-right: 10px;
 }
 
-
-
-.share h2 {
+.share {
     text-decoration: underline;
     font-family: sans-serif;
     font-size: 18px;
     padding-top: 12px;
 }
 
-.share h2:hover {
-    color: orange;
+.btn-share {
+    border: none;
+    background: none;
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
     cursor: pointer;
 }
 
-/* TABLE */
+.btn-share:hover {
+    color: orange;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*TABLE*/
+
 .db {
     background-color: rgba(169, 215, 255, 0.859);
     color: rgb(38, 38, 82);
@@ -95,7 +115,8 @@
     border-radius: 20px;
 }
 
-td, th {
+td,
+th {
     padding: 8px;
     text-align: center;
 }
@@ -126,32 +147,46 @@ thead tr th {
     color: red;
 }
 
-/* Media Query */
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 416px) {
     .caja {
         border: 1px solid blue;
         padding: 5px;
         border-radius: 20px;
-        flex-direction: column;
     }
 
     .contenedor-seleccion {
-        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
-        align-items: center; /* Centrar elementos en pantallas pequeñas */
+        display: flex;
+        justify-content: center;
     }
 
     .share h2 {
         text-align: center;
     }
+}
 
-    .img_cot {
-        width: 100%; /* Asegurar que la imagen ocupe todo el ancho disponible en pantallas pequeñas */
-        justify-content: center; /* Centrar la imagen en pantallas pequeñas */
-        margin: 20px 0; /* Añadir margen en pantallas pequeñas */
-    }
+.field {
+    margin-bottom: 10px;
+}
 
-    .img_cot img {
-        max-width: 100%;
-        height: auto;
-    }
+.field label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+.field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460AA;
+    color: #fff;
+    border: none
 }

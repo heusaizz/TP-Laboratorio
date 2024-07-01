@@ -1,0 +1,11 @@
+const banners = document.querySelectorAll('.comment.banner'); 
+let bannerActual = 0;
+function cambiarBanner() {
+    banners[bannerActual].style.display = 'none'; //esconde la linea actual
+    bannerActual = (bannerActual + 1) % banners.length; //pasa al siguiente banner
+    banners[bannerActual].style.display = 'block'; //queda el banner 1 en pantalla
+}
+setInterval(cambiarBanner, 5000);  //c/5 segundos cambia el banner con comments
+// Selecciona los comentarios que son banners
+
+//Sistema de banner rotativo

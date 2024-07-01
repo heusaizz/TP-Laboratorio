@@ -6,26 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="css/pages/Contacto.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('bFNL3wrcR7wiB5xGj')
+    </script>
 </head>
 
 <body>
     <div class="Migas">
-                <section class="migas-de-pan">
-                    <p><strong>Usted esta aqui: </strong><a href="index.html">Inicio</a>/Contacto</p>
-                </section>
-            </div>
+        <section class="migas-de-pan">
+            <p><strong>Usted esta aqui: </strong><a href="index.html">Inicio</a>/Contacto</p>
+        </section>
+    </div>
     <div class="container">
         <div class="left">
             <h2>Contacto Web Cotizaciones</h2>
             <div class="contact-form">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre">
-                <label for="email">Email:</label>
-                <input type="email" id="email">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje"></textarea>
-                <button>Enviar</button>
-            </div>
+                <form id="form">
+                    <div class="field">
+                        <label for="from_name">Nombre:</label>
+                        <input type="text" name="from_name" id="from_name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email_id">Email:</label>
+                        <input type="text" name="email_id" id="email_id" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Mensaje:</label>
+                        <input type="text" name="message" id="message" required>
+                    </div>
+                    <input type="submit" id="button" value="Send Email">
+                </form>
+            </div>            
         </div>
         <div class="right">
             <div class="contact-info">
@@ -42,6 +55,7 @@
                 <img class="logo" src="img/UTN_logo.jpg" alt="logo">
             </div>
         </div>
+        <script src="JS/contactoSugerencias.js"></script>
     </div>
 </body>
 
