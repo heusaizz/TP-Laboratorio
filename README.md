@@ -1,7 +1,7 @@
 Integrantes del grupo
 Gutierrez Santino
 Martinez Lorenzo
-Pagano Keile
+Pagano Keila
 
 TPI Laboratorio de Computación 2
 Pagina de cotizaciones con dolarApi
