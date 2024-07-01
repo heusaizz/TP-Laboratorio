@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.migas-de-pan{
+.migas-de-pan {
     text-align: right;
     margin-right: 10px;
 }
@@ -24,7 +24,7 @@
     align-items: center;
     margin-top: 20px;
     border-radius: 5px;
-    background-color: rgb(241, 241, 241); 
+    background-color: rgb(241, 241, 241);
     padding: 10px;
     font-family: sans-serif;
 }
@@ -32,14 +32,14 @@
 .btn {
     border: none;
     background: none;
-    padding: 10px; 
-    margin: 0; 
-    width: fit-content; 
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
     height: fit-content;
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     color: orange;
 }
 
@@ -55,30 +55,67 @@
     margin-right: 10px;
 }
 
-.share h2 {
+.share {
     text-decoration: underline;
     font-family: sans-serif;
     font-size: 18px;
     padding-top: 12px;
 }
 
-.share h2:hover{
+.btn-share {
+    border: none;
+    background: none;
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.btn-share:hover {
     color: orange;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
     cursor: pointer;
 }
 
 /*TABLE*/
 
 .db {
-    background-color: rgba(169, 215, 255, 0.859);  
+    background-color: rgba(169, 215, 255, 0.859);
     color: rgb(38, 38, 82);
     font-weight: bold;
     font-size: 14px;
     text-align: left;
     border-radius: 20px;
-}   
+}
 
-td, th {
+td,
+th {
     padding: 8px;
     text-align: center;
 }
@@ -92,24 +129,25 @@ table {
 }
 
 .tfoot {
-    background-color:rgb(203, 207, 255);
+    background-color: rgb(203, 207, 255);
     border-radius: 10px;
 }
 
 thead tr th {
-    background-color:rgb(203, 207, 255);
+    background-color: rgb(203, 207, 255);
     border-radius: 10px;
 }
 
-.table .fa-arrow-up{
-    color:rgb(0, 255, 98)
+.table .fa-arrow-up {
+    color: rgb(0, 255, 98)
 }
-.table .fa-arrow-down{
-    color:red;
+
+.table .fa-arrow-down {
+    color: red;
 }
 
 
-@media screen and (max-width: 416px){
+@media screen and (max-width: 416px) {
     .caja {
         border: 1px solid blue;
         padding: 5px;
@@ -121,7 +159,33 @@ thead tr th {
         justify-content: center;
     }
 
-    .share h2{
+    .share h2 {
         text-align: center;
     }
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+.field label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+.field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460AA;
+    color: #fff;
+    border: none
 }

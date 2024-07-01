@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,11 +39,18 @@
                     </ul>
                 </div>
                 <div class="comments">
-                    <div class="comment">
+                    <div class="comment banner">
                         <img src="img/1144760.png" alt="Usuario 1">
                         <div class="comment-text">
                             <span class="username">Roger Medina:</span>
                             <p>Tienen muy buen servicio y las cotizaciones son siempre correctas</p>
+                        </div>
+                    </div>
+                    <div class="comment banner">
+                        <img src="img/1144760.png" alt="Usuario 2">
+                        <div class="comment-text">
+                            <span class="username">Otro Usuario:</span>
+                            <p>¡La página es muy fácil de usar!</p>
                         </div>
                     </div>
                 </div>
@@ -53,93 +59,34 @@
 
         <div class="caja c4">
             <div class="contenedor">
-
+        
                 <h2 class="titulo-pizarra">Pizarra de Cotizaciones</h2>
                 <div class="contenedor-seleccion">
                     <section class="seleccion-moneda">
-                        <label for="moneda">Seleccione una moneda:</label>
-                        <select id="moneda" name="moneda">
+                        <p>Seleccione una moneda:</p>
+                        <select id="currencySelector" name="moneda">
                             <option value="TODAS">Todas</option>
-                            <option value="Dólar Oficial">Dólar Oficial</option>
+                            <option value="oficial">Dólar Oficial</option>
+                            <option value="blue">Dólar Blue</option>
+                            <option value="tarjeta">Dólar Tarjeta</option>
+                            <option value="bolsa">Dólar MEP</option>
+                            <option value="mayorista">Dólar Mayorista</option>
+                            <option value="cripto">Dólar Cripto</option>
+                            <option value="eur">Euro</option>
+                            <option value="brl">Real Brasileño</option>
+                            <option value="clp">Peso Chileno</option>
+                            <option value="uyu">Peso Uruguayo</option>
                         </select>
                         <button id="buscar" class="btn"><i class="fa-solid fa-filter fa-custom-size"></i></button>
                     </section>
+                    <script src="filterBox.js"></script>
                 </div>
                 <section class="pizarra">
-                    <p class="ultima-actualizacion">Última actualización: 01/05/2024 12:00 PM</p>
-                    <div class="grilla-cotizaciones">
-                        <div class="cotizacion">
-                            <h3>Dólar Oficial</h3>
-                            <div class="precio-compra">
-                                <span>Compra</span>
-                                <span>$100</span>
-                            </div>
-                            <div class="precio-venta">
-                                <span>Venta</span>
-                                <span>$102</span>
-                            </div>
-                            <div class="active"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
-                        </div>
-                        <div class="cotizacion">
-                            <h3>Dólar Blue</h3>
-                            <div class="precio-compra">
-                                <span>Compra</span>
-                                <span>$100</span>
-                            </div>
-                            <div class="precio-venta">
-                                <span>Venta</span>
-                                <span>$102</span>
-                            </div>
-                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
-                        </div>
-                        <div class="cotizacion">
-                            <h3>Dólar Tarjeta</h3>
-                            <div class="precio-compra">
-                                <span>Compra</span>
-                                <span>$100</span>
-                            </div>
-                            <div class="precio-venta">
-                                <span>Venta</span>
-                                <span>$102</span>
-                            </div>
-                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
-                        </div>
-                        <div class="cotizacion">
-                            <h3>Dólar MEP</h3>
-                            <div class="precio-compra">
-                                <span>Compra</span>
-                                <span>$100</span>
-                            </div>
-                            <div class="precio-venta">
-                                <span>Venta</span>
-                                <span>$102</span>
-                            </div>
-                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
-                        </div>
-                        <div class="cotizacion">
-                            <h3>Dólar CCL</h3>
-                            <div class="precio-compra">
-                                <span>Compra</span>
-                                <span>$100</span>
-                            </div>
-                            <div class="precio-venta">
-                                <span>Venta</span>
-                                <span>$102</span>
-                            </div>
-                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
-                        </div>
-                        <div class="cotizacion">
-                            <h3>Dólar Cripto</h3>
-                            <div class="precio-compra">
-                                <span>Compra</span>
-                                <span>$100</span>
-                            </div>
-                            <div class="precio-venta">
-                                <span>Venta</span>
-                                <span>$102</span>
-                            </div>
-                            <div class="button"><button class="btn"><i class="fas fa-star fa-custom-size"></i></button></div>
-                        </div>
+                    <p class="ultima-actualizacion">Última actualización: </p>
+                    <div class="grilla-cotizaciones" id="grilla-cotizaciones">
+                        <!-- Aquí se mostrarán las cotizaciones en js -->
+                        <script src="getDolares.js"></script>
+                        <div id="cotizacion-info"></div>
                     </div>
                 </section>
             </div>
@@ -160,9 +107,9 @@
                 <h3>Accesos</h3>
                 <ul>
                     <li><a href="#" class="active">Inicio</a></li>
-                    <li><a href="Miarchivo/Miarchivo.html" class="active">Mi Archivo</a></li>
+                    <li><a href="Miarchivo.html" class="active">Mi Archivo</a></li>
                     <li><a href="#" class="active">Informes</a></li>
-                    <li><a href="Contacto/Contacto.html" class="active">Contactenos</a></li>
+                    <li><a href="Contacto.html" class="active">Contactenos</a></li>
                 </ul>
             </div>
             <div class="columna-derecha">
@@ -183,7 +130,7 @@
             </div>
         </footer>
     </div>
-    </div>
+    <script src="banner.js"></script>
 </body>
 
 </html>
